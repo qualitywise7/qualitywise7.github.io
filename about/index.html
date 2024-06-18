@@ -12,7 +12,7 @@
     />
     <link rel="stylesheet" href="/staticfiles/mainfiles/about/style.css" />
     <link rel="stylesheet" href="style.css" />
-    <link
+    <link 
       href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
       rel="stylesheet"
     />
@@ -547,14 +547,14 @@
 
 
     <!-- WhatsApp Chat Button -->
-    <div class="chat-back-to-top">
+    <!-- <div class="chat-back-to-top"> -->
       <!-- <button id="like-button">
         <i class="fa-solid fa-thumbs-up"></i>
       </button>
       <button id="dislike-button">
         <i class="fa-solid fa-thumbs-down"></i>
       </button> -->
-      <div class="whatsapp-chat">
+       <!-- <div class="whatsapp-chat">
         <a
           href="https://api.whatsapp.com/send?phone=918319349660&text=I want to know more!"
           target="_blank"
@@ -565,7 +565,36 @@
       <button id="backToTopBtn" class="back-to-top-btn" onclick="scrollToTop()">
         <i class="fa-solid fa-chevron-up"></i>
       </button>
-    </div>
+    </div>  -->
+
+    <!-- Unused -->
+     
+    <!-- <a href="https://api.whatsapp.com/send?phone=918319349660&text=Any complaints?" target="_blank" class="chat-back-to-top">
+      <div class="whatsapp-chat">
+        <i class="fab fa-whatsapp"></i>
+        Any complaints? 
+      </div>
+      <button id="backToTopBtn" class="back-to-top-btn" onclick="scrollToTop()">
+        <i class="fa-solid fa-chevron-up"></i>
+      </button>
+    </a> -->
+    
+
+    <!-- New -->
+    <div class="chat-back-to-top">
+      <a href="https://api.whatsapp.com/send?phone=918319349660&text=I want to know more!" target="_blank" style="text-decoration: none;">
+        <span style="font-size: 14px; font-weight: 500; color: black; display: block; margin-bottom: 10px;">
+          Any question or complaint
+        </span>
+        <div class="whatsapp-chat">
+          <i class="fab fa-whatsapp" style="font-size: 27px;"></i>
+        </div>
+      </a>
+      <button id="backToTopBtn" class="back-to-top-btn" onclick="scrollToTop()">
+        <i class="fa-solid fa-chevron-up"></i>
+      </button>
+    </div> 
+    
 
     <!-- The Bootstrap Modal -->
     <div

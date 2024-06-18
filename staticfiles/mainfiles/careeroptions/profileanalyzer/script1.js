@@ -3,13 +3,14 @@ function displayJobProfiles(profiles, query = "") {
   const jobProfilesContainer = document.getElementById("jobProfiles");
 
   // Clear existing content
-  jobProfilesContainer.innerHTML = "";
+  jobProfilesContainer.innerHTML = " ";
 
   // Create a document fragment for better performance
   const fragment = document.createDocumentFragment();
 
   // Loop through each profile and create a card for it
-  profiles.forEach((profile) => {
+  profiles.forEach((profile, index) => {
+    const serialNumber = index + 1;
     const profileUrl = `http://jobsdoor360.in/myaccount/jobsforyou/?jobType=all&location=india&profile=${encodeURIComponent(
       profile.name
     )}&page=1`;
@@ -19,7 +20,7 @@ function displayJobProfiles(profiles, query = "") {
       <div class="card mb-3">
         <div class="card-body">
           <h6 class="text-center card-title fs-5 fw-bold h6 text-white py-2 mb-3">
-            ${profile.name}
+             ${serialNumber}. ${profile.name}
           </h6>
           <p class="card-text">
             <b>Minimum Qualifications:</b> ${profile.minimum_qualifications.join(
