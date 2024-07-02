@@ -9,6 +9,16 @@
       type="text/css"
       href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
     />
+    <style>
+      .password-container {
+        display: flex;
+        align-items: center;
+      }
+
+      .password-container p {
+        margin: 0 0 0 62px;
+      }
+    </style>
   </head>
 
   <body>
@@ -26,18 +36,24 @@
             placeholder="Email"
           />
 
-          <label for="password">Password:</label>
+          <label
+            style="margin-bottom: 8px"
+            class="password-container"
+            for="password"
+          >
+            Password:
+            <p class="label">
+              <a class="label" href="/forgotpassword/">Forgot password?</a>
+            </p>
+          </label>
           <input type="password" id="password" name="password" required />
 
-          <button type="submit" id="login-btn" style="margin-top: 20px">Login</button>
+          <button type="submit" id="login-btn" style="margin-top: 20px">
+            Login
+          </button>
         </form>
-        <p class="bottom-heading">
-          <span>
-            <a href="/forgotpassword/">Forgot password?</a>
-          </span>
-        </p>
 
-        <!-- <button
+        <button
           id="google-login-btn"
           class="google-button"
           style="
@@ -49,7 +65,7 @@
           "
         >
           <i class="fab fa-google"></i><span>Login with Google</span>
-        </button> -->
+        </button>
         <div class="lines-text">
           <span>OR</span>
         </div>
@@ -68,26 +84,26 @@
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/toastify-js"
     ></script>
-   <script type="module" src="/staticfiles/mainfiles/login/script.js"></script>
+    <script type="module" src="/staticfiles/mainfiles/login/script.js"></script>
     <script>
-//    async function transferData() {
-// try{
-// step1: Read data from source collection
-//   const sourceSnapshot= await getDocs(collection(db, "users"));
-// step2: Write data to destination collection
-//   sourceSnapshot.forEach(async(doc)=>{
-//     const docData=doc.data();
-//     await setDoc(collection(db,"login_details"), doc.id, docData);
-//      console.log(`Document ${doc.id} transferred successfully.`);
-//   });
-//    console.log("Data transfer completed");
-//  } catch (error){
-//  console.error("Error transferring data:", error);
-// }
-// }
+      //    async function transferData() {
+      // try{
+      // step1: Read data from source collection
+      //   const sourceSnapshot= await getDocs(collection(db, "users"));
+      // step2: Write data to destination collection
+      //   sourceSnapshot.forEach(async(doc)=>{
+      //     const docData=doc.data();
+      //     await setDoc(collection(db,"login_details"), doc.id, docData);
+      //      console.log(`Document ${doc.id} transferred successfully.`);
+      //   });
+      //    console.log("Data transfer completed");
+      //  } catch (error){
+      //  console.error("Error transferring data:", error);
+      // }
+      // }
 
-// call function to start data transfer
-// transferData();
-   </script>
+      // call function to start data transfer
+      // transferData();
+    </script>
   </body>
 </html>
